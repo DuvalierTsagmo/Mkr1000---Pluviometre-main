@@ -2,7 +2,7 @@
   Titre      : Pluviometrie
   Auteur     : Duvalier Tsagmo
   Date       : 24/03/2023
-  Description: Envoie le nombre de bascule du à une quantité de pluie provenant du auget
+  Description: Envoie le nombre de bascule du à une quantité de pluie provenant du Anemometre
   Version    : 0.0.1
 */
 
