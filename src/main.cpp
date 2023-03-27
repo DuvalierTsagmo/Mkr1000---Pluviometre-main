@@ -14,7 +14,7 @@
 // #include "WIFIConnector_MKR1000.h"
 // #include "MQTTConnector.h"
 
-// Definition des pin
+// Definition des pins
 const int PinReedSwitch = 1; // Reedswitch pour le decompteur
 volatile int Compteur = 0;   // Compteur de basculement de l'auget
 
