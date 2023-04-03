@@ -45,7 +45,7 @@ void setup()
 void loop()
 {
     // Sauvegarde du temps en cours
-    /*tempsActuel = millis();
+    tempsActuel = millis();
 
     //Envoie du decompte sur thingsboard  après chaque 01 min
     if ((tempsActuel - tempsPasse) >  tempsNecessaire){
@@ -53,5 +53,5 @@ void loop()
       Serial.println(Compteur);
       Compteur = 0;
       tempsPasse = tempsActuel;
-    } */
+    } 
 }
