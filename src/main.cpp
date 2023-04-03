@@ -14,26 +14,25 @@
 // #include "WIFIConnector_MKR1000.h"
 // #include "MQTTConnector.h"
 
-// Definition des pins
+// Definition des pin
 const int PinReedSwitch = 1; // Reedswitch pour le decompteur
 volatile int Compteur = 0;   // Compteur de basculement de l'auget
 
 // Variables de gestions du temps
 unsigned int tempsActuel = 0;
 unsigned int tempsPasse = 0;
-unsigned int tempsNecessaire = 60000; // 1 min
+unsigned int tempsNecessaire = 5000; // 1 min
 
 // Interrupt pour compter le nombre de bascule
 void compteurBascule()
 {
     Compteur++;
+    Serial.print(Compteur);
+    Compteur = 0;
 }
 
 void setup()
 {
-    // Branchement au reseau
-    // wifiConnect(); // Branchement au réseau WIFI
-    // MQTTConnect(); // Branchement au broker MQTT à Thingsboard
 
     Serial.begin(9600);
     // Definition des pinMode
@@ -46,16 +45,13 @@ void setup()
 void loop()
 {
     // Sauvegarde du temps en cours
-    tempsActuel = millis();
+    /*tempsActuel = millis();
 
-    // Envoie du decompte sur thingsboard  après chaque 01 min
-    if ((tempsActuel - tempsPasse) > tempsNecessaire)
-    {
+    //Envoie du decompte sur thingsboard  après chaque 01 min
+    if ((tempsActuel - tempsPasse) >  tempsNecessaire){
 
-        // appendPayload("Compteur", Compteur);
-        // sendPayload();
-        Compteur = 0;
-        tempsPasse = tempsActuel;
-        Serial.println(Compteur);
-    }
+      Serial.println(Compteur);
+      Compteur = 0;
+      tempsPasse = tempsActuel;
+    } */
 }
